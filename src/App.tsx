@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import "./App.module.scss";
+import styles from "./App.module.scss";
 import CustomNavbar from "./components/navbar/CustomNavbar";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <CustomNavbar />
-      <div>
+      <div className={styles["page-container"]}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
