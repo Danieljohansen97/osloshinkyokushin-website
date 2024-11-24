@@ -1,9 +1,10 @@
-import styles from './Home.module.css';
+import Hero from '../../components/hero/Hero';
+import styles from './Home.module.scss';
 
 const Home = () => {
   return (
-    <div>
-        <h1>Home</h1>
+    <div className={styles["page-container"]}>
+        <Hero />
     </div>
   )
 }
