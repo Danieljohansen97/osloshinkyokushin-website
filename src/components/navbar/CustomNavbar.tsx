@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import LinkWithIcon from "../linkWithIcon/LinkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -10,8 +10,10 @@ import {
   faRightFromBracket,
   faRightToBracket,
   faUser,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./CustomNavbar.module.scss";
+import Banner from "../banner/Banner";
 
 export default function CustomNavbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -22,12 +24,13 @@ export default function CustomNavbar() {
 
   return (
     <>
-      <div className={styles["nav-title-section"]}>
-        <h1 className={styles["nav-title"]}>Oslo Fullkontakt Karate</h1>
-      </div>
+      <Banner />
       <div className={styles["nav-main"]}>
         <button className={styles["dropdown-toggle"]} onClick={toggleDropdown}>
-          <FontAwesomeIcon icon={faBars} /> 
+          <FontAwesomeIcon
+            className={styles["dropdown-icon"]}
+            icon={isDropdownOpen ? faXmark : faBars}
+          />
           <span>Oslo Fullkontakt Karate</span>
         </button>
         <div
@@ -35,55 +38,24 @@ export default function CustomNavbar() {
             isDropdownOpen ? styles["open"] : ""
           }`}
         >
-          <div className={styles["link-container"]}>
-            <Link to="/">
-              <FontAwesomeIcon icon={faHouse} />
-              <span>Hjem</span>
-            </Link>
-          </div>
-          <div className={styles["link-container"]}>
-            <Link to="/about">
-              <FontAwesomeIcon icon={faCircleInfo} />
-              <span>Om oss</span>
-            </Link>
-          </div>
-          <div className={styles["link-container"]}>
-            <Link to="/training">
-              <FontAwesomeIcon icon={faDumbbell} />
-              <span>Trening</span>
-            </Link>
-          </div>
-          <div className={styles["link-container"]}>
-            <Link to="/program">
-              <FontAwesomeIcon icon={faCalendarDays} />
-              <span>Program</span>
-            </Link>
-          </div>
+          <LinkWithIcon to="/" icon={faHouse} label="Hjem" />
+          <LinkWithIcon to="/about" icon={faCircleInfo} label="Om oss" />
+          <LinkWithIcon to="/training" icon={faDumbbell} label="Trening" />
+          <LinkWithIcon to="/program" icon={faCalendarDays} label="Program" />
         </div>
 
         {/*
           TODO: Display different options here based on user logged in or not  
         */}
-        
+
         <div className={styles["nav-section-2"]}>
-          <div className={styles["link-container"]}>
-            <Link to="/user">
-              <FontAwesomeIcon icon={faUser} />
-              <span>Min side</span>
-            </Link>
-          </div>
-          <div className={styles["link-container"]}>
-            <Link to="/login">
-              <FontAwesomeIcon icon={faRightToBracket} />
-              <span>Logg inn</span>
-            </Link>
-          </div>
-          <div className={styles["link-container"]}>
-            <Link to="/logout">
-              <FontAwesomeIcon icon={faRightFromBracket} />
-              <span>Logg ut</span>
-            </Link>
-          </div>
+          <LinkWithIcon to="/user" icon={faUser} label="Min Side" />
+          <LinkWithIcon
+            to="/login"
+            icon={faRightFromBracket}
+            label="Logg inn"
+          />
+          <LinkWithIcon to="/logout" icon={faRightToBracket} label="Logg ut" />
         </div>
       </div>
     </>

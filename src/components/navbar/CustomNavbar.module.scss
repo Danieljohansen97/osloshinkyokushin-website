@@ -74,12 +74,28 @@
     }
 }
 
+.active-link {
+    color: yellow !important;
+}
+
 .dropdown-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    align-items: center;
+
+    .dropdown-icon {
+        padding: 0.5rem;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+        &:hover {
+            background-color: white;
+            color: rgb(75, 75, 75);
+            border: 1px solid rgb(75, 75, 75);
+        }
+    }
 }
 
 @media (max-width: 768px) {
