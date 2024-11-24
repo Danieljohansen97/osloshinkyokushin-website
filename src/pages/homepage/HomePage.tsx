@@ -1,15 +1,15 @@
 import bannerImg from "../../assets/osloshin_banner.jpg"
-import "./homepage.css"
+import "./HomePage.module.css"
 
 type Props = {}
 
 const HomePage = (props: Props) => {
   return (
     <div>
-      <div className='banner-container'>
-        <img className='banner-image' src={bannerImg} alt="Oslo Shinkyokushin" />
+      <div>
+        <img className='banner-image' src={bannerImg} alt="Oslo Fullkontakt Karate" />
       </div>
-        <h1>Oslo Shinkyokushin</h1>
+        <h1>Oslo Fullkontakt Karate</h1>
     </div>
   )
 }
