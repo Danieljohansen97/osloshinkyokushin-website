@@ -1,7 +1,6 @@
 .nav-title-section {
     display: flex;
     justify-content: center;
-    width: 100vw;
     align-items: center;
     background-color: rgb(75, 75, 75);
     color: white;
@@ -18,7 +17,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 1rem;
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(58, 58, 58);
     gap: 2rem;
     position: -webkit-sticky; /* For Safari */
     position: sticky;
@@ -34,8 +33,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
-    transition: max-height 0.3s ease-in-out;
-    
+    transition: max-height 0.3s ease-in-out;   
 }
 
 .nav-section-1.open {
@@ -72,10 +70,13 @@
     span {
         margin-left: 1rem;
     }
-}
 
-.active-link {
-    color: yellow !important;
+    &:has(.active-link) {
+        a {
+            border-bottom: 1px solid orange;
+            box-shadow: 0 20px 20px -10px rgba(0,0,0,0.45) inset, 0 -20px 10px -20px orange inset, -10px 0 20px -10px rgba(0,0,0,0.45) inset;
+        }
+    }
 }
 
 .dropdown-toggle {

@@ -11,11 +11,11 @@ function App() {
     <>
       <CustomNavbar />
       <div className={styles["page-container"]}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/training" element={<Training />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/training" element={<Training />} />
+        </Routes>
       </div>
     </>
   );
