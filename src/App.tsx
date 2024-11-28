@@ -5,6 +5,7 @@ import CustomNavbar from "./components/navbar/CustomNavbar";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Training from "./pages/training/Training";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/training" element={<Training />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }

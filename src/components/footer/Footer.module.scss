@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+.footer-section {
+    
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        &:hover span{
+            color: rgb(167, 167, 231);
+        }
+    }
+}
+
+.facebook-logo {
+    color: white;
+    
+}
