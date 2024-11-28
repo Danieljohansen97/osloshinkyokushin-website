@@ -1,6 +1,7 @@
 
 import FacebookLogo from '../../assets/Facebook_Logo_Primary.png';
-import InstagramLogo from "../../assets/Instagram_Glyph_Gradient.png"
+import InstagramLogo from "../../assets/Instagram_Glyph_Gradient.png";
+import YoutubeLogo from "../../assets/yt_logo_rgb_light.png";
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -22,18 +23,21 @@ const Footer = () => {
                 </ul>
             </div>
             <div className={styles["footer-section"]}>
-                <h2>Følg oss</h2>
+                <h2>Følg oss på sosiale medier!</h2>
                 <ul className={styles["footer-list"]}>
                     <li>
                         <a href="https://www.facebook.com/oslofullkontakt" target="_blank" rel="noreferrer">
-                            <img src={FacebookLogo} />
-                            <span>Oslo Fullkontakt Karate</span>
+                            <img src={FacebookLogo} />                
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/kyokushin.oslo" target="_blank" rel="noreferrer">
-                            <img src={InstagramLogo} />
-                            <span>@kyokushin.oslo</span>
+                            <img src={InstagramLogo} />  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@OsloShinkyokushin" target="_blank" rel="noreferrer">
+                            <img src={YoutubeLogo} />
                         </a>
                     </li>
                 </ul>
