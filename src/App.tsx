@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Training from "./pages/training/Training";
 import Footer from "./components/footer/Footer";
+import News from "./pages/news/News";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div className={styles["page-container"]}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/news" element={<News />} />
           <Route path="/about" element={<About />} />
           <Route path="/training" element={<Training />} />
         </Routes>

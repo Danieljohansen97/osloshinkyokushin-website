@@ -7,6 +7,7 @@ import {
   faCircleInfo,
   faDumbbell,
   faHouse,
+  faNewspaper,
   faRightFromBracket,
   faRightToBracket,
   faUser,
@@ -39,6 +40,7 @@ export default function CustomNavbar() {
           }`}
         >
           <LinkWithIcon to="/" icon={faHouse} label="Hjem" />
+          <LinkWithIcon to="/news" icon={faNewspaper} label="Nyheter" />
           <LinkWithIcon to="/about" icon={faCircleInfo} label="Om oss" />
           <LinkWithIcon to="/training" icon={faDumbbell} label="Trening" />
           <LinkWithIcon to="/program" icon={faCalendarDays} label="Program" />
@@ -50,12 +52,12 @@ export default function CustomNavbar() {
 
         <div className={styles["nav-section-2"]}>
           <LinkWithIcon to="/user" icon={faUser} label="Min Side" />
+          <LinkWithIcon to="/login" icon={faRightToBracket} label="Logg inn" />
           <LinkWithIcon
-            to="/login"
+            to="/logout"
             icon={faRightFromBracket}
-            label="Logg inn"
+            label="Logg ut"
           />
-          <LinkWithIcon to="/logout" icon={faRightToBracket} label="Logg ut" />
         </div>
       </div>
     </>
