@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": ["$tsc"],
+      "label": "npm: build",
+      "detail": "tsc && vite build",
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "group": "none",
+      "problemMatcher": ["$tsc-watch"],
+      "label": "run dev server",
+      "detail": "vite",
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true,
+        "group": "vite_watch"
+      }
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "problemMatcher": {
+        "base": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*(DEV|RUN|RERUN).*$",
+          "endsPattern": "^.*(PASS|FAIL).*$"
+        }
+      },
+      "label": "npm: test",
+      "detail": "vitest",
+      "isBackground": true,
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true,
+        "group": "vite_watch"
+      }
+    },
+    {
+      "label": "Dev: Test & Watch",
+      "dependsOn": ["run dev server", "npm: test"]
+    }
+  ]
+}

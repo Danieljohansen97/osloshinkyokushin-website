@@ -1,0 +1,76 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attatch to Vitest",
+      "port": 9229,
+      "address": "localhost",
+      "request": "attach",
+      "type": "node",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": false,
+        "group": "debug",
+        "order": 2
+      }
+    },
+    {
+      "name": "Watch-testing (external terminal)",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "test"],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+        "${workspaceFolder}\\node_modules\\**\\*.js",
+        "<node_internals>/**/*.js",
+        "<node_internals>\\**\\*.js"
+      ],
+      "type": "node",
+      "console": "externalTerminal",
+      "presentation": {
+        "hidden": true,
+        "group": "debug",
+        "order": 1
+      }
+    },
+    {
+      "name": "Watch-testing",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "test"],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+        "${workspaceFolder}\\node_modules\\**\\*.js",
+        "<node_internals>/**/*.js",
+        "<node_internals>\\**\\*.js"
+      ],
+      "type": "node",
+      "presentation": {
+        "hidden": false,
+        "group": "launch",
+        "order": 1
+      }
+    },
+    {
+      "name": "Start Development server",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "start"],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+        "${workspaceFolder}\\node_modules\\**\\*.js",
+        "<node_internals>/**/*.js",
+        "<node_internals>\\**\\*.js"
+      ],
+      "type": "node",
+      "presentation": {
+        "hidden": false,
+        "group": "launch",
+        "order": 2
+      }
+    }
+  ]
+}
