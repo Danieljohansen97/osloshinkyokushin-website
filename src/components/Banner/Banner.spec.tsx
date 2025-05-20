@@ -1,5 +1,5 @@
-import { describe, expect, it, should } from 'vitest';
-import { act, render, waitFor } from '#testUtils';
+import { describe, expect, it } from 'vitest';
+import { render } from '#testUtils';
 import { Banner } from '#components/Banner';
 
 describe('the banner component', () => {
