@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from '../navbar/CustomNavbar.module.scss';
+import styles from './Banner.module.scss';
 
-const Banner = () => {
+type Props = {
+  testid: string;
+};
+
+const Banner = ({ testid }: Props) => {
   return (
-    <div
-      data-testid="banner.titleSection"
-      className={styles['nav-title-section']}
-    >
+    <div data-testid={testid} className={styles['nav-title-section']}>
       <h1 data-testid="banner.titleHeader" className={styles['nav-title']}>
         Oslo Fullkontakt Karate
       </h1>

@@ -1,0 +1,27 @@
+.link-container {
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      color: rgb(75, 75, 75);
+      background-color: white;
+    }
+  }
+  span {
+    margin-left: 1rem;
+  }
+
+  &:has(.active-link) {
+    a {
+      border-bottom: 1px solid orange;
+      box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.45) inset,
+        0 -20px 10px -20px orange inset,
+        -10px 0 20px -10px rgba(0, 0, 0, 0.45) inset;
+    }
+  }
+}

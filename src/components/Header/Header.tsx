@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import LinkWithIcon from '../linkWithIcon/LinkWithIcon';
+import { NavigationLink } from '#components/NavigationLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
@@ -13,10 +13,10 @@ import {
   faUser,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
-import styles from './CustomNavbar.module.scss';
+import styles from './Header.module.scss';
 import { Banner } from '#components/Banner';
 
-export default function CustomNavbar() {
+const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -25,7 +25,7 @@ export default function CustomNavbar() {
 
   return (
     <>
-      <Banner />
+      <Banner testid="header.banner" />
       <div className={styles['nav-main']}>
         <button className={styles['dropdown-toggle']} onClick={toggleDropdown}>
           <FontAwesomeIcon
@@ -39,11 +39,16 @@ export default function CustomNavbar() {
             isDropdownOpen ? styles['open'] : ''
           }`}
         >
-          <LinkWithIcon to="/" icon={faHouse} label="Hjem" />
-          <LinkWithIcon to="/news" icon={faNewspaper} label="Nyheter" />
-          <LinkWithIcon to="/about" icon={faCircleInfo} label="Om oss" />
-          <LinkWithIcon to="/training" icon={faDumbbell} label="Trening" />
-          <LinkWithIcon to="/program" icon={faCalendarDays} label="Program" />
+          <NavigationLink
+            testid="header.home"
+            to="/"
+            icon={faHouse}
+            label="Hjem"
+          />
+          <NavigationLink to="/news" icon={faNewspaper} label="Nyheter" />
+          <NavigationLink to="/about" icon={faCircleInfo} label="Om oss" />
+          <NavigationLink to="/training" icon={faDumbbell} label="Trening" />
+          <NavigationLink to="/program" icon={faCalendarDays} label="Program" />
         </div>
 
         {/*
@@ -51,9 +56,13 @@ export default function CustomNavbar() {
         */}
 
         <div className={styles['nav-section-2']}>
-          <LinkWithIcon to="/user" icon={faUser} label="Min Side" />
-          <LinkWithIcon to="/login" icon={faRightToBracket} label="Logg inn" />
-          <LinkWithIcon
+          <NavigationLink to="/user" icon={faUser} label="Min Side" />
+          <NavigationLink
+            to="/login"
+            icon={faRightToBracket}
+            label="Logg inn"
+          />
+          <NavigationLink
             to="/logout"
             icon={faRightFromBracket}
             label="Logg ut"
@@ -62,4 +71,6 @@ export default function CustomNavbar() {
       </div>
     </>
   );
-}
+};
+
+export { Header };

@@ -31,6 +31,7 @@
       "#lib/*": ["src/lib/*"],
       "#helpers": ["src/lib/helpers"],
       "#helpers/*": ["src/lib/helpers/*"],
+      "#components": ["src/components"],
       "#components/*": ["src/components/*"],
       "#contexts": ["src/contexts"],
       "#pages": ["src/pages"],
