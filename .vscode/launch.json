@@ -14,7 +14,7 @@
       "presentation": {
         "hidden": false,
         "group": "debug",
-        "order": 2
+        "order": 1
       }
     },
     {
@@ -32,8 +32,8 @@
       "console": "externalTerminal",
       "presentation": {
         "hidden": true,
-        "group": "debug",
-        "order": 1
+        "group": "launch",
+        "order": 3
       }
     },
     {
@@ -51,13 +51,13 @@
       "presentation": {
         "hidden": false,
         "group": "launch",
-        "order": 1
+        "order": 2
       }
     },
     {
       "name": "Start Development server",
       "request": "launch",
-      "runtimeArgs": ["run-script", "start"],
+      "runtimeArgs": ["run-script", "dev"],
       "runtimeExecutable": "npm",
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
@@ -70,6 +70,17 @@
         "hidden": false,
         "group": "launch",
         "order": 2
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Dev: Test & Watch",
+      "configurations": ["Start Development server", "Watch-testing"],
+      "presentation": {
+        "hidden": false,
+        "group": "launch",
+        "order": 1
       }
     }
   ]
