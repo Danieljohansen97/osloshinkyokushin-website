@@ -15,6 +15,10 @@
     "dotenv-pull": "npx dotenv-vault@latest pull",
     "dotenv-push": "npx dotenv-vault@latest push"
   },
+  "engines": {
+    "npm": ">=9.8.0",
+    "node": ">=20.15.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -30,6 +34,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
@@ -37,6 +44,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "jsdom": "^26.1.0",
     "sass": "^1.80.6",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.11.0",

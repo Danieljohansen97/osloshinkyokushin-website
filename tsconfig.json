@@ -1,7 +1,44 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "target": "ES2023",
+    "useDefineForClassFields": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
+
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    "paths": {
+      "*": ["src/types/*"],
+      "#assets": ["src/assets"],
+      "#lib/*": ["src/lib/*"],
+      "#helpers": ["src/lib/helpers"],
+      "#helpers/*": ["src/lib/helpers/*"],
+      "#components/*": ["src/components/*"],
+      "#contexts": ["src/contexts"],
+      "#pages": ["src/pages"],
+      "#testUtils": ["src/tests/testUtils.tsx"],
+      "#libTestUtils": ["src/lib/tests/testUtils.ts"],
+      "#hooks/*": ["src/hooks/*"]
+    }
+  },
+  "include": ["src", "src/**/*.json"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
