@@ -14,8 +14,8 @@
     "testcoverage": "npx vitest run --coverage"
   },
   "engines": {
-    "npm": ">=10.1.0",
-    "node": ">=20.15.0"
+    "npm": ">=10.9.2",
+    "node": ">=22.11.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
