@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": ".",
+    "rootDir": "./src",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
@@ -38,6 +38,7 @@
       "#contexts": ["src/contexts"],
       "#pages": ["src/pages"],
       "#testUtils": ["src/tests/testUtils.tsx"],
+      "#translations": ["src/i18n/translations/translationKeys.ts"],
       "#libTestUtils": ["src/lib/tests/testUtils.ts"],
       "#hooks/*": ["src/hooks/*"]
     }

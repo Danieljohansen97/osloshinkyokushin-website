@@ -15,6 +15,10 @@ export default defineConfig({
       '#components': path.resolve(__dirname, './src/components'),
       '#pages': path.resolve(__dirname, './src/pages'),
       '#testUtils': path.resolve(__dirname, './src/tests/testUtils.tsx'),
+      '#translations': path.resolve(
+        __dirname,
+        './src/i18n/translations/translationKeys.ts',
+      ),
       '#libTestUtils': path.resolve(__dirname, './src/lib/tests/testUtils.ts'),
       '#hooks': path.resolve(__dirname, './src/hooks'),
     },

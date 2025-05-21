@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import translationKeys from '#translations';
 import { NavigationLink } from '#components/NavigationLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -17,6 +19,7 @@ import styles from './Header.module.scss';
 import { Banner } from '#components/Banner';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -32,7 +35,7 @@ const Header = () => {
             className={styles['dropdown-icon']}
             icon={isDropdownOpen ? faXmark : faBars}
           />
-          <span>Oslo Fullkontakt Karate</span>
+          <span>{t(translationKeys.common.club_name)}</span>
         </button>
         <div
           className={`${styles['nav-section-1']} ${
@@ -43,7 +46,7 @@ const Header = () => {
             testid="header.home"
             to="/"
             icon={faHouse}
-            label="Hjem"
+            label={t(translationKeys.navbar.home_link)}
           />
           <NavigationLink to="/news" icon={faNewspaper} label="Nyheter" />
           <NavigationLink to="/about" icon={faCircleInfo} label="Om oss" />
