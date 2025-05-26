@@ -1,0 +1,22 @@
+# If we've made changes to the translation files, run the script to
+# update the translation keys
+
+# Get files that are staged for commit
+changed_files=$(git diff --name-only --staged);
+
+# Check if translations.json is part of the string
+# If it is the case (pardon the pun), we run the script
+# and add the updated translationKeys.ts to the commit
+case "$changed_files" in
+  *translations.json*)
+      echo 'Translation files have changed.'
+      echo 'Running script to generate translation keys.'
+      echo '----------------------------------------------------'
+      bash -c ./tools/generate_translationkeys.sh
+      git add src/i18n/translationKeys.ts
+    ;;
+  *) ;;
+esac
+
+# To test the hook, uncomment the following line to abort the git command
+#exit 1

@@ -11,7 +11,8 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "npx vite preview",
     "test": "npx vitest",
-    "testcoverage": "npx vitest run --coverage"
+    "testcoverage": "npx vitest run --coverage",
+    "prepare": "node .husky/install.mjs"
   },
   "engines": {
     "npm": ">=10.9.2",
@@ -44,6 +45,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "sass": "^1.80.6",
     "typescript": "~5.8.3",

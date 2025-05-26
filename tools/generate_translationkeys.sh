@@ -7,7 +7,7 @@ echo "*******************************************"
 echo
 
 PROJECT_HOME=$(git rev-parse --show-toplevel)
-SCRIPT_HOME="$PROJECT_HOME/src/tools"
+SCRIPT_HOME="$PROJECT_HOME/tools"
 i18n_HOME="$PROJECT_HOME/src/i18n"
 
 translations="$i18n_HOME/translations/no/translations.json"
