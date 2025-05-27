@@ -12,8 +12,16 @@ case "$changed_files" in
       echo 'Translation files have changed.'
       echo 'Running script to generate translation keys.'
       echo '----------------------------------------------------'
-      bash -c ./tools/generate_translationkeys.sh
-      git add src/i18n/translationKeys.ts
+
+      bash -c "$PWD/tools/generate_translationkeys.sh -q"
+
+      if [ "$?" -eq 0 ]; then
+        git add "$PWD/src/i18n/translations/translationKeys.ts"
+        echo 'Translation keys updated and added to commit!'
+      else
+        echo "Something went wrong. Aborting."
+        exit 1
+      fi
     ;;
   *) ;;
 esac
