@@ -1,6 +1,7 @@
 import styles from './Banner.module.scss';
 import { useTranslation } from 'react-i18next';
 import translationKeys from '#translations';
+import React from 'react';
 
 type Props = {
   testid?: string;
@@ -8,7 +9,7 @@ type Props = {
 
 // Passing testid as prop in order to accurately
 // test implementation of the component
-const Banner = ({ testid }: Props) => {
+const Banner: React.FC<Props> = ({ testid }) => {
   const { t } = useTranslation();
 
   return (
