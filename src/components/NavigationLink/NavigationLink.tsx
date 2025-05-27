@@ -3,30 +3,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import styles from './NavigationLink.module.scss';
 
-interface NavItemProps {
-  testid?: String;
+interface Props {
+  testid?: string;
   to: string;
   icon: IconDefinition;
   label: string;
 }
 
-const NavigationLink: React.FC<NavItemProps> = ({
-  testid,
-  to,
-  icon,
-  label,
-}) => {
+const NavigationLink: React.FC<Props> = ({ testid, to, icon, label }) => {
   return (
-    <div data-testid={testid ?? null} className={styles['link-container']}>
+    <div
+      data-testid={testid ?? 'navlink.container'}
+      className={styles['link-container']}
+    >
       <NavLink
+        data-testid={'navlink'}
         to={to}
         className={({ isActive }) => (isActive ? styles['active-link'] : '')}
       >
-        <FontAwesomeIcon icon={icon} />
+        <FontAwesomeIcon data-testid={'navlink.icon'} icon={icon} />
         <span>{label}</span>
       </NavLink>
     </div>
   );
 };
 
-export { NavigationLink };
+export { NavigationLink, type Props };
