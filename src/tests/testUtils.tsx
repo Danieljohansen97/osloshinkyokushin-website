@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { cleanup, render, RenderOptions } from '@testing-library/react';
 import { afterEach, afterAll, vi } from 'vitest';
 import { I18nextProvider } from 'react-i18next';
