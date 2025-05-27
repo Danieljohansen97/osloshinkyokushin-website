@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { render } from '#testUtils';
 import { Header } from '#components/Header';
-import { BrowserRouter } from 'react-router-dom';
 
 describe('the header component', () => {
   it('should contain the main banner for our site', () => {
@@ -16,9 +15,5 @@ describe('the header component', () => {
 });
 
 const testHeader = () => {
-  return render(
-    <BrowserRouter>
-      <Header />
-    </BrowserRouter>,
-  );
+  return render(<Header />);
 };

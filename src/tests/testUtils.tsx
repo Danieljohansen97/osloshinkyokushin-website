@@ -2,6 +2,7 @@
 import { cleanup, render, RenderOptions } from '@testing-library/react';
 import { afterEach, afterAll, vi } from 'vitest';
 import { I18nextProvider } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
 import i18n from './setup';
 
 afterEach(() => {
@@ -14,7 +15,11 @@ afterAll(() => {
 });
 
 const ProviderWrapper = ({ children }: { children: React.ReactNode }) => {
-  return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
+  return (
+    <I18nextProvider i18n={i18n}>
+      <BrowserRouter>{children}</BrowserRouter>
+    </I18nextProvider>
+  );
 };
 
 function customRender(
