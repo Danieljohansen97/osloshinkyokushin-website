@@ -11,7 +11,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "npx vite preview",
     "test": "npx vitest",
-    "testcoverage": "npx vitest run --coverage",
+    "coverage": "npx vitest run --coverage",
     "prepare": "node .husky/install.mjs"
   },
   "engines": {
