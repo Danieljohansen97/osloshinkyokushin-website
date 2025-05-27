@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import translationKeys from '#translations';
 
 type Props = {
-  testid: string;
+  testid?: string;
 };
 
 // Passing testid as prop in order to accurately
@@ -12,7 +12,10 @@ const Banner = ({ testid }: Props) => {
   const { t } = useTranslation();
 
   return (
-    <div data-testid={testid} className={styles['nav-title-section']}>
+    <div
+      data-testid={testid ?? 'banner'}
+      className={styles['nav-title-section']}
+    >
       <h1 data-testid="banner.titleHeader" className={styles['nav-title']}>
         {t(translationKeys.common.club_name)}
       </h1>

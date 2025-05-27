@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { render } from '#testUtils';
+import { render, i18n } from '#testUtils';
 import { Banner } from '#components/Banner';
+import translationKeys from '#translations';
 
 describe('the banner component', () => {
   it('should contain a header', () => {
@@ -10,10 +11,10 @@ describe('the banner component', () => {
 });
 
 describe('the header', () => {
-  it('should contain the text "Oslo Fullkontakt Karate"', () => {
+  it('should contain the club name', () => {
     const { getByTestId } = testBanner();
     expect(getByTestId('banner.titleHeader').textContent).toBe(
-      'Oslo Fullkontakt Karate',
+      i18n.t(translationKeys.common.club_name),
     );
   });
 });
