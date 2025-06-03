@@ -11,12 +11,17 @@ describe('the banner component', () => {
 });
 
 describe('the header', () => {
-  it('should contain the club name', () => {
-    const { getByTestId } = testBanner();
-    expect(getByTestId('banner.titleHeader').textContent).toBe(
-      i18n.t(translationKeys.common.club_name),
-    );
-  });
+  it(
+    'should contain the club name: "' +
+      i18n.t(translationKeys.common.club_name) +
+      '"',
+    () => {
+      const { getByTestId } = testBanner();
+      expect(getByTestId('banner.titleHeader').textContent).toBe(
+        i18n.t(translationKeys.common.club_name),
+      );
+    },
+  );
 });
 
 const testBanner = () => {
