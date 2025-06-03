@@ -3,6 +3,10 @@
     "club_name": "Oslo Kyoukushin Karateklubb"
   },
   "navbar": {
-    "home_link": "Hjem"
+    "home": "Hjem",
+    "news": "Nyheter",
+    "about_us": "Om oss",
+    "training": "Trening",
+    "schedule": "Program"
   }
 }

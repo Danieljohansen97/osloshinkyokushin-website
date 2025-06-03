@@ -4,7 +4,11 @@ const translationKeys = {
     club_name: 'common.club_name',
   },
   navbar: {
-    home_link: 'navbar.home_link',
+    home: 'navbar.home',
+    news: 'navbar.news',
+    about_us: 'navbar.about_us',
+    training: 'navbar.training',
+    schedule: 'navbar.schedule',
   },
 };
 

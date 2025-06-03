@@ -46,12 +46,32 @@ const Header = () => {
             testid="header.home"
             to="/"
             icon={faHouse}
-            label={t(translationKeys.navbar.home_link)}
+            label={t(translationKeys.navbar.home)}
           />
-          <NavigationLink to="/news" icon={faNewspaper} label="Nyheter" />
-          <NavigationLink to="/about" icon={faCircleInfo} label="Om oss" />
-          <NavigationLink to="/training" icon={faDumbbell} label="Trening" />
-          <NavigationLink to="/program" icon={faCalendarDays} label="Program" />
+          <NavigationLink
+            testid="header.news"
+            to="/news"
+            icon={faNewspaper}
+            label={t(translationKeys.navbar.news)}
+          />
+          <NavigationLink
+            testid="header.about_us"
+            to="/about"
+            icon={faCircleInfo}
+            label={t(translationKeys.navbar.about_us)}
+          />
+          <NavigationLink
+            testid="header.training"
+            to="/training"
+            icon={faDumbbell}
+            label={t(translationKeys.navbar.training)}
+          />
+          <NavigationLink
+            testid="header.schedule"
+            to="/schedule"
+            icon={faCalendarDays}
+            label={t(translationKeys.navbar.schedule)}
+          />
         </div>
 
         {/*

@@ -3,6 +3,10 @@
     "club_name": "Oslo Kyokushin Karate club"
   },
   "navbar": {
-    "home_link": "Home"
+    "home": "Home",
+    "news": "News",
+    "about_us": "About us",
+    "training": "Training",
+    "schedule": "Schedule"
   }
 }

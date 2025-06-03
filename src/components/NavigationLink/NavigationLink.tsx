@@ -12,12 +12,9 @@ interface Props {
 
 const NavigationLink: React.FC<Props> = ({ testid, to, icon, label }) => {
   return (
-    <div
-      data-testid={testid ?? 'navlink.container'}
-      className={styles['link-container']}
-    >
+    <div data-testid={'navlink.container'} className={styles['link-container']}>
       <NavLink
-        data-testid={'navlink'}
+        data-testid={testid ?? 'navlink'}
         to={to}
         className={({ isActive }) => (isActive ? styles['active-link'] : '')}
       >
