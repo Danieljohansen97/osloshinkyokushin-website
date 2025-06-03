@@ -10,6 +10,10 @@ const translationKeys = {
     training: 'navbar.training',
     schedule: 'navbar.schedule',
   },
+  home_page: {
+    welcome: 'home_page.welcome',
+    ingress: 'home_page.ingress',
+  },
 };
 
 Object.freeze(translationKeys);

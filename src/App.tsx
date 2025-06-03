@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import styles from './App.module.scss';
 import './i18n/localization';
 
-import Home from './pages/home/Home';
+import Home from './pages/Home/Home';
 import About from './pages/about/About';
 import Training from './pages/training/Training';
 import { Header, Footer } from '#components';

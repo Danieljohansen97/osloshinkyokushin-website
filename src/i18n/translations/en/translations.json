@@ -1,6 +1,6 @@
 {
   "common": {
-    "club_name": "Oslo Kyokushin Karate club"
+    "club_name": "Oslo Kyokushin Karateklub"
   },
   "navbar": {
     "home": "Home",
@@ -8,5 +8,9 @@
     "about_us": "About us",
     "training": "Training",
     "schedule": "Schedule"
+  },
+  "home_page": {
+    "welcome": "Welcome to Oslo Kyokushin Karateklubb's website.",
+    "ingress": "Here you can read about our dojo, our style of karate, see our syllabus, the training program, and read news about our excursions to Do Stuff™."
   }
 }

@@ -8,5 +8,9 @@
     "about_us": "Om oss",
     "training": "Trening",
     "schedule": "Program"
+  },
+  "home_page": {
+    "welcome": "Velkommen til Oslo Kyokushin Karateklubb sin nettside.",
+    "ingress": "Her finner du informasjon om dojoen vår, stilarten vi trener, syllabus, program, og nyhetssaker fra når klubben har vært ute og Gjort Ting™."
   }
 }

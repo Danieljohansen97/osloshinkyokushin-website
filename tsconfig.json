@@ -37,6 +37,7 @@
       "#components/*": ["src/components/*"],
       "#contexts": ["src/contexts"],
       "#pages": ["src/pages"],
+      "#pages/*": ["src/pages/*"],
       "#testUtils": ["src/tests/testUtils.tsx"],
       "#translations": ["src/i18n/translations/translationKeys.ts"],
       "#libTestUtils": ["src/lib/tests/testUtils.ts"],
