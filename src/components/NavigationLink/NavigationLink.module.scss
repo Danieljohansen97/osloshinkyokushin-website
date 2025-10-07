@@ -1,27 +1,69 @@
+$link-color: rgba(255, 255, 255, 0.9);
+$link-color-hover: #ffffff;
+$accent-start: #ff8a00;
+$accent-end: #ffae00;
+$underline-height: 2px;
+
 .link-container {
+  display: inline-flex;
+
   a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+
     text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    color: $link-color;
+    font-size: 0.975rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    padding: 0.4rem 0.25rem;
+    border-bottom: $underline-height solid transparent;
+
+    transition: color 0.15s ease;
+
+    /* Animated underline bar */
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -$underline-height;
+      height: $underline-height;
+      width: 100%;
+      background: linear-gradient(90deg, $accent-start, $accent-end);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
 
     &:hover {
-      color: rgb(75, 75, 75);
-      background-color: white;
+      color: $link-color-hover;
+
+      &::after {
+        transform: scaleX(1);
+      }
     }
-  }
-  span {
-    margin-left: 1rem;
+
+    &:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.35);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
   }
 
-  &:has(.active-link) {
-    a {
-      border-bottom: 1px solid orange;
-      box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.45) inset,
-        0 -20px 10px -20px orange inset,
-        -10px 0 20px -10px rgba(0, 0, 0, 0.45) inset;
+  /* Active route state (NavLink adds this class to <a/>) */
+  .active-link {
+    color: $link-color-hover;
+
+    &::after {
+      transform: scaleX(1);
     }
+  }
+
+  /* icon/label spacing for older browsers without flex gap */
+  span {
+    margin-left: 0.1rem;
   }
 }

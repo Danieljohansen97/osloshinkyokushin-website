@@ -20,8 +20,8 @@ const Training = () => {
         <div className={styles.card} data-testid="training.times">
           <h2>Treningstider</h2>
           <ul className={styles.list}>
-            <li>Mandager: 19:00 – 21:00</li>
-            <li>Onsdager: 19:00 – 21:00</li>
+            <li>Mandager: 19:00 – 20:30</li>
+            <li>Onsdager: 19:00 – 20:00</li>
           </ul>
         </div>
 
