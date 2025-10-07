@@ -1,9 +1,11 @@
 import styles from './History.module.scss';
+import { useTranslation } from 'react-i18next';
+import masOyamaImg from '#assets/Masutatsu_Oyama.webp';
 
 const History = () => {
-  const placeholderImg =
-    'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+  const { t } = useTranslation();
 
+  // TODO: i8n translate page
   return (
     <div className={styles.historyPage} data-testid="aboutHistoryPage">
       <section className={styles['text-container']}>
@@ -11,7 +13,7 @@ const History = () => {
           <figure className={styles.figure}>
             <img
               className={styles.image}
-              src={placeholderImg}
+              src={masOyamaImg}
               alt="Masutatsu Oyama"
             />
             <figcaption>Masutatsu Oyama</figcaption>
