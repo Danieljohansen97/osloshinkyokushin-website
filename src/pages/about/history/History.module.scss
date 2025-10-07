@@ -1,4 +1,4 @@
-.aboutPage {
+.historyPage {
   display: grid;
   gap: clamp(1rem, 2vw + 0.5rem, 2rem);
   color: #222;
@@ -24,44 +24,44 @@
   }
 }
 
-.links {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-
-  @media (min-width: 720px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.card {
+.content {
   background: #ffffff;
   border: 1px solid #ececec;
   border-radius: 1rem;
-  padding: clamp(1rem, 1.2vw + 0.75rem, 1.5rem);
+  padding: clamp(1rem, 1.2vw + 0.75rem, 1.75rem);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
   display: grid;
-  gap: 0.5rem;
+  gap: clamp(0.75rem, 1vw, 1.25rem);
+  max-width: 1000px;
 
-  h2 {
-    margin: 0;
+  h2,
+  h3 {
+    margin: 0.25rem 0 0 0;
   }
 
   p {
     margin: 0;
-    color: #444;
-    line-height: 1.6;
+    color: #3a3a3a;
+    line-height: 1.8;
+    font-size: clamp(1rem, 0.8vw + 0.85rem, 1.15rem);
   }
 
-  .link {
-    justify-self: start;
-    color: #0a6cff;
-    text-decoration: none;
-    border-bottom: 2px dashed #0a6cff;
-    margin-top: 0.25rem;
+  ul {
+    margin: 0.25rem 0 0 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.35rem;
 
-    &:hover {
-      opacity: 0.85;
+    li {
+      line-height: 1.7;
+      color: #444;
+      font-size: clamp(1rem, 0.7vw + 0.85rem, 1.1rem);
     }
   }
+}
+
+.milestones,
+.features {
+  display: grid;
+  gap: 0.5rem;
 }

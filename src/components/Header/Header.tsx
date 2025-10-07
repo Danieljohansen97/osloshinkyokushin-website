@@ -26,6 +26,8 @@ const Header = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const closeDropdown = () => setIsDropdownOpen(false);
+
   return (
     <>
       <Banner testid="header.banner" />
@@ -47,30 +49,49 @@ const Header = () => {
             to="/"
             icon={faHouse}
             label={t(translationKeys.navbar.home)}
+            onClick={closeDropdown}
           />
           <NavigationLink
             testid="header.news"
             to="/news"
             icon={faNewspaper}
             label={t(translationKeys.navbar.news)}
+            onClick={closeDropdown}
           />
-          <NavigationLink
-            testid="header.about_us"
-            to="/about"
-            icon={faCircleInfo}
-            label={t(translationKeys.navbar.about_us)}
-          />
+
+          {/* About with sub-pages */}
+          <div className={styles['menu-group']}>
+            <NavigationLink
+              testid="header.about_us"
+              to="/about"
+              icon={faCircleInfo}
+              label={t(translationKeys.navbar.about_us)}
+              onClick={closeDropdown}
+            />
+            <div className={styles['submenu']}>
+              {/* Example sub-page under About; add more as needed */}
+              <NavigationLink
+                to="/about/history"
+                icon={faCircleInfo}
+                label="Historie"
+                onClick={closeDropdown}
+              />
+            </div>
+          </div>
+
           <NavigationLink
             testid="header.training"
             to="/training"
             icon={faDumbbell}
             label={t(translationKeys.navbar.training)}
+            onClick={closeDropdown}
           />
           <NavigationLink
             testid="header.schedule"
             to="/schedule"
             icon={faCalendarDays}
             label={t(translationKeys.navbar.schedule)}
+            onClick={closeDropdown}
           />
         </div>
 
@@ -79,16 +100,23 @@ const Header = () => {
         */}
 
         <div className={styles['nav-section-2']}>
-          <NavigationLink to="/user" icon={faUser} label="Min Side" />
+          <NavigationLink
+            to="/user"
+            icon={faUser}
+            label="Min Side"
+            onClick={closeDropdown}
+          />
           <NavigationLink
             to="/login"
             icon={faRightToBracket}
             label="Logg inn"
+            onClick={closeDropdown}
           />
           <NavigationLink
             to="/logout"
             icon={faRightFromBracket}
             label="Logg ut"
+            onClick={closeDropdown}
           />
         </div>
       </div>
